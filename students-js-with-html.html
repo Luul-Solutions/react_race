@@ -9,9 +9,38 @@
 </head>
 <body>
 
-    <div id="root">
- 
-    </div>
+    <div id="root"></div>
+       <script type="text/javascript">
+
+            let div = document.createElement("div");
+            
+
+            let h1 = document.createElement("h1");
+            h1.innerText = "Students";
+            div.appendChild(h1);
+
+            
+            let ul = document.createElement("ul");
+            div.appendChild(ul);
+
+            let li1 = document.createElement("li");
+            ul.appendChild(li1);
+
+            let li2 = document.createElement("li");
+            ul.appendChild(li2);
+
+            let p1 = document.createElement("p");
+            p1.id="pid";
+            p1.innerText = "mohammed";
+            li1.appendChild(p1)
+
+            let p2 = document.createElement("p");
+            p2.id="pid2";
+            p2.innerText = "libaan";
+            li2.appendChild(p2)
+
+            document.getElementById("root").appendChild(div);
+       </script>
     
 </body>
 </html>
