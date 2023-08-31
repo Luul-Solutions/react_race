@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>students-js-with-html</title>
+</head>
+<body>
+    <div id="root">   
+        <script type="text/javascript">
+
+        let div1 = document.createElement("div");
+
+        let h1 = document.createElement("h1");
+        h1.innerText = "students";
+        div.appendChild(h1);
+
+        let ul = document.createElement("ul");
+        div.appendChild(ul);
+
+        let li1 = document.createElement("li");
+        ul.appendChild(li1);
+
+        let li2 = document.createElement("li");
+        ul.appendChild(li2);
+
+        let p1 = document.createElement("p");
+        p1.id = "pid";
+        p1.innerText = "Mohammed";
+        li1.appendChild(p1);
+
+        let p2 = document.createElement("p");
+        p2.id = "pid";
+        p2.innerText = "Libaan";
+        li2.appendChild(p2);
+
+        document.getElementById("root").appendChild(div);
+    </script>
+    </div>
+</body>
+</html>
