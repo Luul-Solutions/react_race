@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>react-student-beautiful-function-props</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        function StudentList (props) {
+                return  <div>
+                            <h1>{props.header}</h1>
+                            <ul>
+                                <li>
+                                    <p id="pid1">{props.names0}</p>
+                                </li>
+
+                                <li>
+                                    <p id="pid2">{props.names1}</p>
+                                </li>
+                            </ul>
+                        </div>
+            }
+        ReactDOM.render(<StudentList header="Students props" names0="Mohammed" names1="Liibaan"/>,document.getElementById("root"))
+    </script>
+</body>
+</html> 
