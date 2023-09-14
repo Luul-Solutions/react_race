@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>react-student-beautiful-function-state</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        function StudentList () {
+            const [header, setHeader] = React.useState(["Student state"])
+            const [names, setNames] = React.useState(["Mohammed", "Liibaan"])
+                return  <div>
+                            <h1>{header}</h1>
+                            <ul>
+                                <li>
+                                    <p id="pid1">{names[0]}</p>
+                                </li>
+
+                                <li>
+                                    <p id="pid2">{names[1]}</p>
+                                </li>
+                            </ul>
+                        </div>
+            }
+        ReactDOM.render(<StudentList />,document.getElementById("root"))
+    </script>
+</body>
+</html> 
