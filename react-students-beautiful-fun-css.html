@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>react-student-beautiful</title>
+    <style>
+        .blue-helv {
+            font-family: Helvetica, sans-serif;
+            color: blue;
+        }
+
+        .green-squares {
+           list-style-type:square;
+           color:green;
+        }
+        
+        .grass-color {
+            color:green;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        let secondDiv =  <div>
+                            <h1 className="blue-helv"  >Students</h1>
+                            <ul>
+                                <li className="green-squares">
+                                    <p id="pid1"  className="grass-color"  >Mohamed sharmake</p>
+                                </li>
+
+                                <li className="green-squares">
+                                    <p id="pid2" className="grass-color">Liibaan</p>
+                                </li>
+                            </ul>
+                        </div>
+        ReactDOM.render(secondDiv,document.getElementById("root"))
+    </script>
+</body>
+</html> 
