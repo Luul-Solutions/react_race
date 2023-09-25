@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>react-student-beautiful-function-state</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+       
+       function ListInput (props) {
+           return  <input type="text" onBlur={()=>props.addItemToList(event)} />
+                
+       }
+
+       function ListItem (props) {
+           return <li>
+                      <span>{props.item}</span>
+                      <button type="button" onClick={()=>props.handleRemove(props.item)} >X</button>
+                  </li>
+       }
+
+      function EasyList () {
+        const [header,setHeader] = React.useState(["Shopping List"])
+        const [items,setItems] = React.useState(["Banana", "Orange"])
+
+
+        function addItemToList(e) {
+            if(e.target.value) {
+                setItems([...items, e.target.value])
+            }
+        }
+
+        function handleRemove(itemToBeRemoved) {
+            const theNewArray = items.filter(
+                (element) => element !== itemToBeRemoved
+            )
+            setItems(theNewArray)
+        }
+        return <div>
+                     <h1>{header}</h1>
+                    <ul>
+                      {
+                        items.map(
+                             (item)=><ListItem item={item} handleRemove={handleRemove}/>                       
+                        )
+                      }
+                   </ul>
+               </div>
+      }
+        ReactDOM.render(<EasyList />,document.getElementById("root"))
+    </script>
+</body>
+</html> 
